@@ -13,6 +13,9 @@ export class ChildComponent implements OnInit {
 
   ngOnInit() {
   }
+  onSubmit(value){
+  	console.log(value)
+  }
 }
 
 export class viewDetail {

@@ -1,7 +1,9 @@
-<form action="/reset" method="post">
-  <div>name:<input type="text"></div>
-  <div>电话号码:<input type="number"></div>
-  <div>密码:<input type="password"></div>
-  <div>确认密码:<input type="password"></div>
-  <button type="button">提交</button>
+<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm.value)">
+  <div>name:<input ngModel name="username" type="text"></div>
+  <div>电话号码:<input ngModel name="mobile" type="number"></div>
+  <div ngModelGroup="passwordGroups">
+  	<div>密码:<input ngModel name="password" type="password"></div>
+    <div>确认密码:<input ngModel name="pconfirm" type="password"></div>
+  </div>
+  <button type="submit">提交</button>
 </form>
