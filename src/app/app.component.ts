@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { viewsDetail } from './child/child.component'
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  statusCode:viewsDetail = new viewsDetail('',0)
+
+  handleFather(event:viewsDetail){
+    this.statusCode = event
+  }
 }
